@@ -1,7 +1,7 @@
 [project]
 name = "olist-review-risk"
 version = "0.1.0"
-description = "description = "Predict the risk of negative reviews on Olist e-commerce orders"
+description ="Predict the risk of negative reviews on Olist e-commerce orders"
 readme = "README.md"
 authors = [
     { name = "Mouad El Idrissi", email = "mouadelidrissi425@gmail.com" }
@@ -15,3 +15,16 @@ olist-review-risk = "olist_review_risk:main"
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.7.0",
+    "ruff>=0.17.2",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
