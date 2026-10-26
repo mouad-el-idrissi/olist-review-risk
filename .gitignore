@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Data: managed by DVC, not Git
+data/**
+!data/**/
+!data/**/.gitkeep
